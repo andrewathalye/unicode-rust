@@ -1,0 +1,14 @@
+"unicode" is a simple rust utility that can convert an arbitrary input stream between any form of UTF-32 and UTF-8.
+It can also be used in the reverse direction, and swap between UTF-32BE and UTF-32LE.
+A potential use case for this could be converting emoji (which can be easily seen in UTF-32 notation) into UTF-8 text that
+can be inserted anywhere.
+
+The program is used as follows:
+unicode -f/-t -l/-b/-s < input > output
+where:
+-f means destination is UTF-8 and input is UTF-32
+-t means destination is UTF-32, input could be UTF-8 or UTF-32.
+
+-l means UTF-32LE source/destination
+-b means UTF-32BE source/destination
+-s means byteswap UTF-32 -> UTF-32
